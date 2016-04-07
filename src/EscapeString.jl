@@ -1,19 +1,19 @@
 module EscapeString
 
-import HttpCommon.escapeHTML
+using HttpCommon
 
 export escapestring
 
 
-"Escapes string s to formt fmt."
+# Registry of available output formats and their handlers
+formats = Dict{Symbol, Function}()
+formats[:html_text] = escapeHTML
+
+
+
+"Escapes string s to format fmt."
 function escapestring(s::AbstractString, fmt::Symbol)
-    result = ""
-    if fmt == :html_text
-        result = escapeHTML(s)
-    else
-        error("Unrecognized format $fmt.")
-    end
-    result
+    formats[fmt](s)
 end
 
 
