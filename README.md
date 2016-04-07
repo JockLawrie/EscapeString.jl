@@ -18,6 +18,7 @@ The following formats are currently supported:
 
 ### Adding new formats
 Suppose you would like to add functionality for escaping to XML. To do this:
+
 1. Write a function that takes an `AbstractString` and escapes it to the desired format, say `escape_xml(s::AbstractString)`.
 2. Save the function in a file such as `src/escape_xml.jl`.
 3. Add `include("escape_xml.jl")` to `src/EscapeString.jl`.
