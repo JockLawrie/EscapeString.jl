@@ -23,6 +23,7 @@ Suppose you would like to add functionality for escaping to XML. To do this:
 2. Save the function in a file such as `src/escape_xml.jl`.
 3. Add `include("escape_xml.jl")` to `src/EscapeString.jl`.
 4. Add `formats[:xml] = escape_xml` to `src/EscapeString.jl`.
+
 That's it!
 
 
