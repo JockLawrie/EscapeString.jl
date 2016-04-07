@@ -7,9 +7,9 @@
 ### Usage
 EscapeString provides a single function that escapes a given string according to the given format. The function signature is `escapestring(s::AbstractString, fmt::Symbol)`. For example:
 ```julia
-s  = "<div><b>Hi there 'Sam'!</b></div>"
+s  = "<div>Hi there 'Sam'!</div>"
 s2 = escapestring(s, :html_text)
-s2 == "&lt;div&gt;&lt;b&gt;Hi there &#39;Sam&#39;!&lt;/b&gt;&lt;/div&gt;"    # true
+s2 == "&lt;div&gt;Hi there &#39;Sam&#39;!&lt;/div&gt;"    # true
 ```
 
 The following formats are currently supported:
