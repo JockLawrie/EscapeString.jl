@@ -12,6 +12,7 @@ s2 = escapestring(s, :html_text)
 s2 == "&lt;div&gt;Hi there &#39;Sam&#39;!&lt;/div&gt;"    # true
 ```
 
+### Available formats
 The following formats are currently supported:
 - HTML text (`:html_text`)
 
