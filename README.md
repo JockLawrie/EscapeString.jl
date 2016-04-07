@@ -16,6 +16,15 @@ The following formats are currently supported:
 - HTML text (`:html_text`)
 
 
+### Adding new formats
+Suppose you would like to add functionality for escaping to XML. To do this:
+1. Write a function that takes an `AbstractString` and escapes it to the desired format, say `escape_xml(s::AbstractString)`.
+2. Save the function in a file such as `src/escape_xml.jl`.
+3. Add `include("escape_xml.jl")` to `src/EscapeString.jl`.
+4. Add `formats[:xml] = escape_xml` to `src/EscapeString.jl`.
+That's it!
+
+
 ### Todo
 1. Other formats will be added over time on an as-needed basis, such as:
     - HTML attribute
